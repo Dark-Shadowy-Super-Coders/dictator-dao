@@ -1,11 +1,10 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.6.12;
-pragma experimental ABIEncoderV2;
+pragma solidity ^0.8.21;
 
-import "@boringcrypto/boring-solidity/contracts/libraries/BoringMath.sol";
-import "@boringcrypto/boring-solidity/contracts/Domain.sol";
-import "@boringcrypto/boring-solidity/contracts/ERC20.sol";
-import "@boringcrypto/boring-solidity/contracts/BoringBatchable.sol";
+import "./boring/BoringMath.sol";
+import "./boring/Domain.sol";
+import "./boring/ERC20.sol";
+import "./boring/BoringBatchable.sol";
 import "./libraries/SignedSafeMath.sol";
 import "./interfaces/IRewarder.sol";
 
@@ -34,7 +33,7 @@ contract DictatorDAO is IERC20, Domain {
         string memory sharesSymbol,
         string memory sharesName,
         address initialOperator
-    ) public {
+    ) {
         // The DAO is the owner of the DictatorToken
         token = new DictatorToken(tokenSymbol, tokenName);
 
@@ -330,7 +329,7 @@ contract DictatorToken is ERC20, BoringBatchable {
     mapping(uint16 => uint256) public weekShares;
     mapping(address => mapping(uint16 => uint256)) public userWeekShares;
 
-    constructor(string memory symbol_, string memory name_) public {
+    constructor(string memory symbol_, string memory name_) {
         symbol = symbol_;
         name = name_;
         DAO = DictatorDAO(msg.sender);

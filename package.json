@@ -9,8 +9,7 @@
         "ts": "yarn run typechain --target ethers-v5 \"artifacts/contracts/DictatorDAOFlat.sol/Dictator?(DAO|Deployer|Token).json\""
     },
     "dependencies": {
-        "@boringcrypto/boring-solidity": "boringcrypto/BoringSolidity",
-        "@boringcrypto/hardhat-framework": "boringcrypto/hardhat-framework"
+        
     },
     "devDependencies": {
         "@typechain/ethers-v4": "^4.0.0",
