@@ -2,7 +2,7 @@
 
 // File @boringcrypto/boring-solidity/contracts/libraries/BoringMath.sol@v1.2.1
 // License-Identifier: MIT
-pragma solidity 0.6.12;
+pragma solidity ^0.8.21;
 
 /// @notice A library for performing overflow-/underflow-safe math,
 /// updated with awesomeness from of DappHub (https://github.com/dapphub/ds-math).
@@ -73,7 +73,7 @@ library BoringMath32 {
 // Based on code and smartness by Ross Campbell and Keno
 // Uses immutable to store the domain separator to reduce gas usage
 // If the chain id changes due to a fork, the forked chain will calculate on the fly.
-pragma solidity 0.6.12;
+pragma solidity ^0.8.21;
 
 // solhint-disable no-inline-assembly
 
@@ -125,7 +125,7 @@ contract Domain {
 
 // File @boringcrypto/boring-solidity/contracts/ERC20.sol@v1.2.1
 // License-Identifier: MIT
-pragma solidity 0.6.12;
+pragma solidity ^0.8.21;
 
 // solhint-disable no-inline-assembly
 // solhint-disable not-rely-on-time
@@ -240,7 +240,7 @@ contract ERC20 is ERC20Data, Domain {
 
 // File @boringcrypto/boring-solidity/contracts/interfaces/IERC20.sol@v1.2.1
 // License-Identifier: MIT
-pragma solidity 0.6.12;
+pragma solidity ^0.8.21;
 
 interface IERC20 {
     function totalSupply() external view returns (uint256);
@@ -268,7 +268,7 @@ interface IERC20 {
 
 // File @boringcrypto/boring-solidity/contracts/libraries/BoringERC20.sol@v1.2.1
 // License-Identifier: MIT
-pragma solidity 0.6.12;
+pragma solidity ^0.8.21;
 
 // solhint-disable avoid-low-level-calls
 
@@ -354,8 +354,8 @@ library BoringERC20 {
 
 // File @boringcrypto/boring-solidity/contracts/BoringBatchable.sol@v1.2.1
 // License-Identifier: MIT
-pragma solidity 0.6.12;
-pragma experimental ABIEncoderV2;
+pragma solidity ^0.8.21;
+
 
 // solhint-disable avoid-low-level-calls
 // solhint-disable no-inline-assembly
@@ -419,7 +419,7 @@ contract BoringBatchable is BaseBoringBatchable {
 // File contracts/libraries/SignedSafeMath.sol
 // License-Identifier: MIT
 
-pragma solidity 0.6.12;
+pragma solidity ^0.8.21;
 
 library SignedSafeMath {
     int256 private constant _INT256_MIN = -2**255;
@@ -513,7 +513,7 @@ library SignedSafeMath {
 
 // File contracts/interfaces/IRewarder.sol
 // License-Identifier: MIT
-pragma solidity 0.6.12;
+pragma solidity ^0.8.21;
 
 interface IRewarder {
     function onTokensReward(
@@ -533,7 +533,7 @@ interface IRewarder {
 
 // File contracts/DictatorDAO.sol
 //License-Identifier: MIT
-pragma solidity ^0.6.12;
+pragma solidity ^0.8.21;
 
 
 
