@@ -351,6 +351,12 @@ MigrationBackup/
 
 node_modules
 
+# Yarn Plug'n'Play files
+.pnp.cjs
+.pnp.loader.mjs
+.yarn/
+yarn.lock
+
 #Hardhat files
 cache
 artifacts

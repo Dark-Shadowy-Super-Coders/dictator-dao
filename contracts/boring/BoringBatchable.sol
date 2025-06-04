@@ -1,5 +1,6 @@
 pragma solidity ^0.8.21;
 
+import "../interfaces/IERC20.sol";
 
 // solhint-disable avoid-low-level-calls
 // solhint-disable no-inline-assembly

@@ -5,6 +5,7 @@ import "./boring/BoringMath.sol";
 import "./boring/Domain.sol";
 import "./boring/ERC20.sol";
 import "./boring/BoringBatchable.sol";
+import "./boring/BoringERC20.sol";
 import "./libraries/SignedSafeMath.sol";
 import "./interfaces/IRewarder.sol";
 
@@ -54,8 +55,6 @@ contract DictatorDAO is IERC20, Domain {
     /// @notice owner > nonce mapping. Used in `permit`.
     mapping(address => uint256) public nonces;
 
-    event Transfer(address indexed _from, address indexed _to, uint256 _value);
-    event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 
     function balanceOf(address user) public view override returns (uint256 balance) {
         return users[user].balance;
